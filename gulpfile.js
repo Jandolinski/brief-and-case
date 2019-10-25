@@ -14,32 +14,22 @@ const fs = require('fs');
 let dirs = {
 	css: 'src/css/*.scss',
 	js: 'src/js/*.js',
-	jslib: 'src/js/lib/_libraries.js',
 	build: 'dist/',
 	buildcss: 'dist/build-style.js',
-	buildjs: 'dist/build-js.js',
-	buildjslibs: 'dist/build-libs.js'
+	buildjs: 'dist/build-js.js'
 };
 
 gulp.task('js', () =>
 	gulp.src(dirs.js)
-		.pipe(babel({
-			presets: ['@babel/preset-env']
-		}))
-		.pipe(concat('build-js.js'))
-		.pipe(uglify())
-		.pipe(gulp.dest(dirs.build))
-		.pipe(livereload())
+	.pipe(babel({
+		presets: ['@babel/preset-env']
+	}))
+	.pipe(concat('build-js.js'))
+	.pipe(uglify())
+	.pipe(gulp.dest(dirs.build))
+	.pipe(livereload())
 );
 
-gulp.task('jslibs', () =>
-	gulp.src(dirs.jslib)
-		.pipe(concat('build-libs.js'))
-		.pipe(include())
-		.pipe(uglify())
-		.pipe(gulp.dest(dirs.build))
-		.pipe(livereload())
-);
 
 gulp.task('css', function () {
 	return gulp.src('src/css/*.scss')
@@ -58,8 +48,8 @@ gulp.task('css', function () {
 });
 
 gulp.task('combine-jsbuild', function () {
-	if (fs.existsSync(dirs.buildjs) && fs.existsSync(dirs.buildjslibs)) {
-		return gulp.src(['dist/build-libs.js', 'dist/build-js.js'])
+	if (fs.existsSync(dirs.buildjs)) {
+		return gulp.src(['dist/build-js.js'])
 			.pipe(concat('build-combined.js'))
 			.pipe(gulp.dest(dirs.build))
 	} else {
@@ -67,17 +57,8 @@ gulp.task('combine-jsbuild', function () {
 	}
 });
 
-gulp.task('jslibs', () =>
-	gulp.src(dirs.jslib)
-		.pipe(concat('build-libs.js'))
-		.pipe(include())
-		.pipe(uglify())
-		.pipe(gulp.dest(dirs.build))
-		.pipe(livereload())
-);
-
 gulp.task('build',
-	gulp.series('css', 'js', 'jslibs', 'combine-jsbuild')
+	gulp.series('css', 'js', 'combine-jsbuild')
 );
 
 gulp.task('watchphp', function () {
@@ -85,18 +66,23 @@ gulp.task('watchphp', function () {
 		.pipe(livereload());
 });
 
+gulp.task('watchhtml', function () {
+	return gulp.src('html/*.html')
+		.pipe(livereload());
+});
+
 
 const runWatchers = () => {
 	gulp.watch(['*.php', '**/*.php'], gulp.series('watchphp'));
+	gulp.watch(['*.html', '**/*.html'], gulp.series('watchhtml'));
 	gulp.watch(dirs.css, gulp.series('css'));
 	gulp.watch(dirs.js, gulp.series('js'));
-	gulp.watch(dirs.jslib, gulp.series('jslibs'));
 	livereload.listen();
 };
 
 
 gulp.task('default', function () {
-	if (fs.existsSync(dirs.buildjs) && fs.existsSync(dirs.buildjslibs)) {
+	if (fs.existsSync(dirs.buildjs)) {
 		console.log('🤟rock on🤟');
 		runWatchers();
 	} else {
