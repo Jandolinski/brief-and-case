@@ -1,0 +1,51 @@
+//roboczo
+.hamburger {
+    display: none;
+}
+
+#mobile-menu {
+    display: none;
+}
+
+.header {
+    font-size: 14px;
+    font-weight: 600;
+
+    .header {
+        &__wrapper {
+            padding: 40px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        &__logo {
+            max-width: 147px;
+            display: block;
+        }
+
+        &__menu {
+            .menu {
+                &__list {
+                    display: flex;
+                    align-items: center;
+                }
+
+                &-item {
+                    margin: 0 20px;
+                }
+            }
+        }
+    }
+
+    .pattern {
+        background: url('../dist/img/pattern.svg');
+        background-repeat: repeat repeat;
+        width: 580px;
+        height: 640px;
+        position: absolute;
+        top: 0;
+        left: 0;
+        z-index: -1;
+    }
+}

@@ -1,3 +1,11 @@
-body {
-    background-color: rebeccapurple;
-}
+$montserrat: 'Montserrat',
+sans-serif;
+$oswald: 'Oswald',
+sans-serif;
+
+
+@import '_reset';
+@import '_global';
+@import '_header';
+@import '_footer';
+@import '_template-homepage';
