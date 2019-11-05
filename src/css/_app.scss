@@ -1,5 +1,7 @@
-$montserrat: 'Montserrat', sans-serif;
-$oswald: 'Oswald', sans-serif;
+$montserrat: 'Montserrat',
+sans-serif;
+$oswald: 'Oswald',
+sans-serif;
 
 @import '_reset';
 @import '_global';
@@ -7,3 +9,4 @@ $oswald: 'Oswald', sans-serif;
 @import '_footer';
 @import '_template-homepage';
 @import '_template-services';
+@import '_template-team';
