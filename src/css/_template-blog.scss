@@ -256,6 +256,12 @@
         &__articles {
             margin-top: 240px;
             .articles {
+                &__wrapper {
+                    display: flex;
+                    flex-wrap: wrap;
+                    justify-content: space-between;
+                    padding-bottom: 360px;
+                }
                 &__case-study {
                     width: 100%;
                     display: flex;
@@ -293,8 +299,8 @@
                             width: 100%;
                         }
                         &__tags {
-                            // display: flex;
-                            // flex-wrap: wrap;
+                            display: flex;
+                            flex-wrap: wrap;
                             padding: 6px 20px;
                             background-color: #000;
                             .tag {
@@ -342,13 +348,13 @@
                 }
             }
             .article {
-                width: 100%;
                 display: flex;
                 justify-content: flex-start;
+                margin-bottom: 120px;
                 
                 .article {
                     &__wrapper {
-                        width: 50%;
+                        // width: 50%;
                     }
                     &__content {
                         width: 483px;
@@ -411,7 +417,8 @@
                      }
                 }
                 &:nth-child(even) {
-                    justify-content: flex-end;
+                    // justify-content: flex-end;
+                    transform: translateY(360px);
                     .article {
                         &__wrapper {
                             display: flex;
