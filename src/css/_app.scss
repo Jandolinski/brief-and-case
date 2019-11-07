@@ -3,6 +3,14 @@ sans-serif;
 $oswald: 'Oswald',
 sans-serif;
 
+//Breakpoints
+$mobile: 820px;
+$tablet: 1090px;
+$laptop-sm: 1280px;
+$laptop-lg: 1360px;
+$desktop-sm: 1500px;
+$desktop-lg: 1900px;
+
 @import '_reset';
 @import '_global';
 @import '_header';

@@ -3,28 +3,93 @@
     margin-left: auto;
     // padding-right: 15px;
     // padding-left: 15px;
-    width: 100%;
     max-width: 100%;
     position: relative;
 }
+.heading {
+    font-family: $oswald;
+    position: relative;
 
-@media (min-width: 768px) {
+    &__sketch {
+        color: transparent;
+        -webkit-text-stroke-width: 1px;
+        -webkit-text-stroke-color: #D1D1D1;
+    }
+
+    &--large {
+        font-size: 102px;
+        font-weight: 700;
+        line-height: 116px;
+    }
+
+    &--medium {
+        font-size: 74px;
+        font-weight: 600;
+        line-height: 85px;
+    }
+}
+@media screen and (min-width: $laptop-lg) {
     .container {
-        width: 750px;
+        width: 1170px;
     }
 }
 
-@media (min-width: 992px) {
+@media screen and (max-width: $laptop-lg) {
+    .container {
+        width: 1070px;
+    }
+}
+
+@media screen and (max-width: $laptop-sm) {
     .container {
         width: 970px;
     }
 }
 
-@media (min-width: 1200px) {
+@media screen and (max-width: $tablet) {
     .container {
-        width: 1170px;
+        width: 750px;
+    }
+    .heading {
+        &--large {
+                font-size: 75px;
+                line-height: 81px;
+        }
     }
 }
+
+@media screen and (max-width: $mobile) {
+    .container {
+        margin-right: auto;
+        margin-left: auto;
+        // padding-right: 15px;
+        // padding-left: 15px;
+        width: 100%;
+        max-width: 100%;
+        position: relative;
+    }
+}
+// @media (min-width: 768px) {
+//     // .container {
+//     //     width: 750px;
+//     // }
+// }
+
+// @media (min-width: 992px) {
+    
+// }
+
+// @media (min-width: 1300px) {
+//     .container {
+//         width: 1070px;
+//     }
+// }
+
+// @media (min-width: 1600px) {
+//     .container {
+//         width: 1170px;
+//     }
+// }
 
 // @media (min-width: 1300px) {
 //     .container {
