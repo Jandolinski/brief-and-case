@@ -1,0 +1,280 @@
+.contact {
+    .contact {
+        &__decorator {
+            &--1 {
+                box-shadow: -3px 24px 55px rgba(0, 0, 0, 0.24);
+                position: absolute;
+                left: -90px;
+                top: -46px;
+            }
+        }
+         &__banner {
+             .banner {
+
+                 &__line1,
+                 &__line2,
+                 &__line3 {
+                     position: absolute;
+                     width: 1px;
+                     height: 800px;
+                     background-color: #e8e8e8;
+                     top: -200px;
+                     z-index: -1;
+                     height: 4670px;
+                 }
+
+                 &__line1 {
+                     left: 0;
+                 }
+
+                 &__line2 {
+                     right: 0;
+                 }
+
+                 &__line3 {
+                     left: 50%;
+                     transform: translateX(-50%);
+                 }
+
+                 &__wrapper {
+                     max-width: 960px;
+                     margin: auto;
+                     position: relative;
+                 }
+
+                 &__content {
+                     padding-top: 70px;
+                     padding-left: 285px;
+                 }
+
+                 &__bottom {
+                     width: 100%;
+                     display: -webkit-box;
+                     display: -ms-flexbox;
+                     display: flex;
+                     -webkit-box-pack: end;
+                     -ms-flex-pack: end;
+                     justify-content: flex-end;
+                     margin-top: 65px;
+                     position: relative;
+                 }
+
+                 &__description {
+                     text-align: right;
+                     color: #000000;
+                     font-size: 14px;
+                     font-weight: 300;
+                     line-height: 27px;
+                 }
+             }
+         }
+         &__content {
+            margin-top: 80px;
+            .content {
+                &__cols {
+                    display: flex;
+                    width: 100%;
+                }
+                &__col {
+                    width: 50%;
+                }
+                &__data {
+                    padding-right: 80px;
+                    .data__heading {
+                        color: #000000;
+                        font-size: 20px;
+                        font-weight: 700;
+                        margin-bottom: 80px;
+                    }
+                    p {
+                        color: #000000;
+                        font-size: 16px;
+                        font-weight: 500;
+                        line-height: 27px;
+                        margin: 20px 0;
+                    }
+                }
+                &__form {
+                    .form {
+                        &__heading {
+                            color: #000000;
+                            font-size: 20px;
+                            font-weight: 700;
+                            margin-bottom: 27px;
+                        }
+                        &__bottom {
+                            width: 100%;
+                            display: flex;
+                            justify-content: flex-end;
+                            margin-top: 15px;
+                        }
+                        &__btn {
+                            box-shadow: 0 4px 28px rgba(0, 0, 0, 0.1);
+                            background-color: #ffffff;
+                            padding: 17px 30px;
+                            width: 50%;
+                            display: block;
+                            color: #004fac;
+                            font-size: 14px;
+                            font-weight: 500;
+                            line-height: 21px;
+                            cursor: pointer;
+                        }
+                        &__select {
+                            margin-top: 40px;
+                            label {
+                                display: flex;
+                                font-size: 14px;
+                                font-weight: 300;
+                                line-height: 20px;
+                                color: #000000;
+                                display: flex;
+                                justify-content: space-between;
+                                p {
+                                    max-width: 520px;
+                                }
+                                input[type="checkbox"] {
+                                    display: none;
+                                }
+                                .checkbox {
+                                    display: inline-block;
+                                    width: 28px;
+                                    height: 28px;
+                                    border: 1px solid #d9d9d9;
+                                    background-color: #ffffff;
+                                    vertical-align: middle;
+                                    cursor: pointer;
+                                    position: relative;
+                                    margin-right: 25px;
+
+                                    &::after {
+                                        content: '';
+                                        position: absolute;
+                                        display: block;
+                                        top: 50%;
+                                        left: 50%;
+                                        transform: translate(-50%, -50%);
+                                        width: 18px;
+                                        height: 18px;
+                                        box-shadow: 0 3px 6px rgba(0, 0, 0, 0.22);
+                                        background-image: radial-gradient(0px 0px at 5205.56% 3622.22%, #004fac 0%, #29a6f4 100%);
+                                        opacity: 0;
+                                        transition: opacity .3s ease-in-out;
+                                    }
+                                }
+
+                                input[type="checkbox"]:checked~.checkbox {
+                                    &::after {
+                                        opacity: 1;
+                                    }
+                                }
+                            }
+                        }
+                    }
+                    form {
+                        width: 100%;
+                        display: flex;
+                        flex-direction: column;
+                        input[type='email'],
+                        input[type='number'],
+                        input[type='text'],
+                        input[type='tel'],
+                        textarea {
+                            box-shadow: 0 4px 28px rgba(0, 0, 0, 0.1);
+                            background-color: #ffffff;
+                            width: 100%;
+                            padding: 17px 24px 16px;
+                            margin: 15px 0;
+                            color: #838383;
+                            font-size: 14px;
+                            font-weight: 500;
+                            line-height: 21px;
+                            cursor: text;
+                        }
+                        textarea::placeholder {
+                            font-style: italic;
+                        }
+                        .textarea__wrapper {
+                            position: relative;
+                        }
+                        .textarea__line {
+                            position: absolute;
+                            width: 2070px;
+                            height: 1px;
+                            background-color: #e8e8e8;
+                            top: -578px;
+                            right: -1756px;
+                            transform: rotate(-45deg);
+                                z-index: -1;
+                        }
+                    }
+                }
+            }
+         }
+         &__map {
+             width: 100%;
+             height: 700px;
+             margin: 70px 0;
+             img {
+                 display: block;
+                 width: 100%;
+             }
+         }
+         &__people {
+             .people {
+                 &__heading {
+                     color: #000000;
+                     font-size: 20px;
+                     font-weight: 700;
+                     margin-bottom: 80px;
+                 }
+                 &__boxes {
+                     width: 100%;
+                     display: flex;
+                     justify-content: space-between;
+                     align-items: stretch;
+                 }
+                 &__box {
+                     display: flex;
+                     flex-direction: column;
+                     align-items: center;
+                     justify-content: space-between;
+                     width: 242px;
+                     .box {
+                         &__group {
+                             display: flex;
+                             flex-direction: column;
+                             align-items: center;
+                         }
+                         &__heading {
+                             color: #000000;
+                             font-size: 20px;
+                             font-weight: 700;
+                             text-align: center;
+                             margin-top: 60px;
+                         }
+                         &__mail {
+                             color: #000000;
+                             font-size: 16px;
+                             font-weight: 500;
+                             line-height: 27px;
+                             margin-top: 13px;
+                         }
+                         &__phone {
+                             color: #004fac;
+                             font-size: 16px;
+                             font-weight: 500;
+                             line-height: 27px;
+                             margin-top: 16px;
+                             &::before {
+                                 content: url('img/icon__phone.svg');
+                                 margin-right: 7px;
+                                 display: inline-block;
+                             }
+                         }
+                     }
+                 }
+             }
+         }
+    }
+}

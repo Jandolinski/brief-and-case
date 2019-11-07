@@ -60,7 +60,7 @@
     bottom: 0;
     left: 0;
     //Roboczo
-    bottom: -160px;
+    bottom: -200px;
     left: -156px;
     width: 311px;
     height: 311px;
@@ -147,14 +147,26 @@
 
         &--4 {
             position: absolute;
-            //roboczo
-            left: 36px;
-            top: 50%;
+            left: 0px;
+            top: 70%;
             transform: translate(-100%, -50%);
             z-index: -1;
+            width: 192px;
+            height: 476px;
+            box-shadow: 0 16px 46px rgba(93, 93, 93, 0.21);
+            background-color: #ffffff;
         }
-
         &--5 {
+            width: 96px;
+            height: 290px;
+            box-shadow: 0 16px 46px rgba(62, 62, 62, 0.37);
+            background-color: #ffffff;
+            position: absolute;
+            right: 0;
+            bottom: 0;
+            transform: translateX(100%);
+        }
+        &--6 {
             position: absolute;
             //roboczo
             left: 123px;
@@ -162,7 +174,7 @@
             transform: translate(-100%, -50%);
         }
 
-        &--6 {
+        &--7 {
             box-shadow: -3px 24px 55px rgba(0, 0, 0, 0.24);
             position: absolute;
             right: 0;
@@ -170,7 +182,7 @@
             transform: translate(100%, -50%);
         }
 
-        &--7 {
+        &--8 {
             width: 96px;
             height: 96px;
             box-shadow: 0 16px 46px rgba(62, 62, 62, 0.21);
@@ -212,7 +224,7 @@
 
             &__line2 {
                 right: 0;
-                height: 4670px;
+                height: 5050px;
             }
 
             &__bottom {
@@ -220,7 +232,7 @@
                 display: flex;
                 justify-content: flex-end;
                 padding-right: 150px;
-                margin-top: 150px;
+                margin-top: 200px;
                 position: relative;
             }
 
@@ -295,6 +307,7 @@
 
     &__services {
         margin-top: 200px;
+        margin-bottom: 250px;
         position: relative;
 
         .services {
@@ -418,7 +431,7 @@
     &__team {
         .team {
             &__heading {
-                margin-bottom: 90px;
+                margin-bottom: 105px;
 
                 .subheading {
                     font-family: $montserrat;
@@ -454,8 +467,12 @@
                 max-width: 384px;
 
                 .box {
+                    &__img__wrapper {
+                        position: relative;
+                    }
                     &__img {
                         height: 544px;
+                        display: block;
 
                     }
 
@@ -513,7 +530,7 @@
             }
 
             &__partners {
-                margin-top: 60px;
+                margin-top: 100px;
 
                 .partners {
                     &__heading {
@@ -524,7 +541,7 @@
                     }
 
                     &__wrapper {
-                        margin-top: 30px;
+                        margin-top: 60px;
                         width: 100%;
                         display: flex;
                         flex-direction: column;
