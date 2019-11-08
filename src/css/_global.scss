@@ -62,11 +62,18 @@
     .container {
         margin-right: auto;
         margin-left: auto;
-        // padding-right: 15px;
-        // padding-left: 15px;
+        padding-right: 25px;
+        padding-left: 25px;
         width: 100%;
         max-width: 100%;
         position: relative;
+    }
+    .heading {
+        &--large {
+            font-size: 65px;
+            line-height: 71px;
+            overflow-wrap: break-word;
+        }
     }
 }
 // @media (min-width: 768px) {

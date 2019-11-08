@@ -883,5 +883,59 @@
 }
 
 @media screen and (max-width: $mobile) {
-
+    .homepage {
+        &__decorator {
+            @for $i from 1 through 8 {
+                &--#{$i} {
+                    display: none;
+                }
+            }
+        }
+        .homepage {
+            &__slider {
+                .swiper-slide {
+                    padding: 0 15px;
+                }
+                .swiper-container {
+                    padding: 0;
+                    padding-top: 55px;
+                }
+                .slider {
+                    &__bottom {
+                        margin-top: 40px;
+                        padding-right: 25px;
+                    }
+                }
+            }
+            &__services {
+                margin-bottom: 50px;
+                .services {
+                    &__description {
+                        text-align: center;
+                    }
+                    &__boxes {
+                        margin-top: 0;
+                        flex-direction: column;
+                        align-items: center;
+                    }
+                }
+            }
+            &__team {
+                .team {
+                    &__heading {
+                        line-height: 20px;
+                        .subheading {
+                            margin-left: 0;
+                        }
+                        .heading {
+                            &__sketch {
+                                font-size: 120px;
+                                left: 0;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
 }

@@ -1,1 +1,1 @@
-"use strict";console.log("hello");
+"use strict";var hamburger=document.querySelector(".hamburger"),hamSVG=hamburger.querySelector(".ham"),mobileMenu=document.querySelector(".menu--mobile");hamburger.addEventListener("click",function(){hamSVG.classList.toggle("active"),mobileMenu.classList.toggle("active")});
