@@ -896,6 +896,12 @@
                 .swiper-slide {
                     padding: 0 15px;
                 }
+                .swiper-pagination {
+                    margin-left: 0;
+                }
+                .swiper-pagination-bullet {
+                    margin: 0 15px;
+                }
                 .swiper-container {
                     padding: 0;
                     padding-top: 55px;
@@ -913,10 +919,23 @@
                     &__description {
                         text-align: center;
                     }
+                    &__box {
+                        flex-basis: 100%;
+                        margin: 20px 0;
+                        .box {
+                            &__number {
+                                .number {
+                                    display: block;
+                                }
+                            }
+                        }
+                    }
                     &__boxes {
                         margin-top: 0;
-                        flex-direction: column;
-                        align-items: center;
+                        // flex-direction: column;
+                        // align-items: center;
+                        // flex-wrap: nowrap;
+                        display: block;
                     }
                 }
             }
@@ -931,6 +950,65 @@
                             &__sketch {
                                 font-size: 120px;
                                 left: 0;
+                            }
+                        }
+                    }
+                    &__box {
+                        .box {
+                            &__img {
+                                height: auto;
+                            }
+                        }
+                    }
+                    &__partners {
+                        .partners {
+                            &__heading {
+                                font-size: 100px;
+                                line-height: 90px;
+                            }
+                            &__description {
+                                overflow-wrap: break-word;
+                                max-width: 100%;
+                                padding-right: 0;
+                            }
+                        }
+                    }
+                }
+            }
+            &__blog {
+                .blog {
+                    &__heading {
+                        .subheading {
+                            margin-right: 105px;
+                            line-height: 35px;
+
+                        }
+                        .heading {
+                            &__sketch {
+                                right: -94px;
+                                font-size: 100px;
+                            }
+                        }
+                    }
+                    &__boxes {
+                        flex-direction: column;
+                        align-items: center;
+                        margin-top: 50px;
+                    }
+                    &__box {
+                        &--large {
+                            flex-direction: column;
+                            align-items: center;
+                            max-width: 576px;
+                            width: 100%;
+                        }
+                        &--small {
+                            margin: 20px 0;
+                        }
+                        .box {
+                            &__description {
+                                margin-top: 40px;
+                                max-width: 100%;
                             }
                         }
                     }

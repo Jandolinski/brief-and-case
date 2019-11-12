@@ -147,6 +147,7 @@
                 }
                 &__list {
                     width: 694px;
+                    max-width: 100%;
                     margin: auto;
                     position: absolute;
                     box-shadow: 0 4px 28px rgba(0, 0, 0, 0.1);
@@ -439,6 +440,163 @@
                     }
                 }
             }
+        }
+    }
+}
+@media screen and (max-width: $laptop-sm) {
+    .blog {
+        .blog {
+            &__articles {
+                .article {
+                    &__content {
+                        padding-right: 20px;
+                    }
+                    &:nth-child(even) {
+                        .article__content {
+                            padding-right: 0;
+                            padding-left: 20px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+@media screen and (max-width: $tablet) {
+    .blog {
+        .blog {
+            &__decorator {
+                &--2 {
+                    display: none;
+                }
+            }
+            &__banner {
+                .banner {
+                    &__content {
+                        padding-left: 130px;
+                    }
+                }
+            }
+            &__articles {
+                margin-top: 115px;
+                .article {
+                    .article {
+                        &__content {
+                            width: 375px;
+                        }
+                    }
+                }
+            }
+            &__tags {
+                .tags {
+                    &__select {
+                        width: 100%;
+                    }
+
+                    &__list {
+                        width: 100%;
+                    }
+
+                    &__selected {
+                        width: 100%;
+                    }
+                }
+            }
+            &__articles {
+                .articles {
+                    &__case-study {
+                        .case-study {
+                            &__bottom {
+                                margin-left: 130px;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media screen and (max-width: $mobile) {
+    .blog {
+        .blog {
+             &__articles {
+                 .articles {
+                     &__case-study {
+                         .case-study {
+                             &__wrapper {
+                                 width: 100%;
+                             }
+
+                             &__bottom {
+                                 margin-left: 0;
+                             }
+                         }
+                     }
+
+                     &__wrapper {
+                         padding-bottom: 0;
+                     }
+                 }
+
+                 .article {
+                     .article {
+                         &__content {
+                             width: 100%;
+                             padding: 0;
+                         }
+                     }
+
+                     &:nth-child(even) {
+                         transform: none;
+
+                         .article {
+                             &__content {
+                                 padding: 0;
+                             }
+                         }
+                     }
+                 }
+             }
+        }
+    }
+}
+
+@media screen and (max-width: $mobile-sm) {
+    .blog {
+        .blog {
+            &__decorator {
+                @for $i from 1 through 5 {
+                    &--#{$i} {
+                        display: none;
+                    }
+                }
+            }
+
+            &__banner {
+                .banner {
+                    &__line1 {
+                        left: 25px;
+                    }
+                    &__line2 {
+                        right: 25px;
+                    }
+
+                    &__content {
+                        padding-left: 0px;
+                    }
+
+                    &__bottom {
+                        margin-top: 40px;
+                    }
+
+                    &__description {
+                        max-width: 500px;
+                    }
+                }
+            }
+            
+           
         }
     }
 }

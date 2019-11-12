@@ -261,3 +261,64 @@
         }
     }
 }
+@media screen and (max-width: $tablet) {
+    .case-study {
+        .case-study {
+            &__content {
+                .next-post {
+                    flex-direction: column;
+                    align-items: flex-start;
+
+                    .next-post {
+                        &__article {
+                            .article {
+                                &__content {
+                                    width: 100%;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+@media screen and (max-width: $mobile) {
+    .case-study {
+        .case-study {
+            &__banner {
+                .banner {
+                    &__tags {
+                        width: 100%;
+                    }
+                }
+            }
+            &__content {
+                .content {
+                    &__description {
+                        .description {
+                            &__wrapper {
+                                width: 100%;
+                                margin-right: 0;
+                            }
+                        }
+                    }
+                    &__box {
+                        &--dark {
+                            padding-left: 25px;
+                            padding-right: 25px;
+                        }
+                        .box {
+                            &__col {
+                                &--sidebar {
+                                    margin-right: 20px;
+                                }
+                            }
+                        }
+                    }
+                }
+                
+            }
+        }
+    }
+}

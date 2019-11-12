@@ -336,3 +336,109 @@
     }
   }
 }
+
+@media screen and (max-width: $laptop-lg) {
+  .services {
+    .services {
+      &__customer {
+        .customer {
+          &__boxes {
+            max-width: 824px;
+            margin-left: 55px;
+          }
+        }
+      }
+      &__range {
+        .range {
+          &__wrapper {
+                max-width: 823px;
+                margin-left: 56px;
+          }
+        }
+      }
+  
+    }
+  }
+}
+
+@media screen and (max-width: $laptop-sm) {
+  .services {
+    .services {
+      &__customer {
+        .customer {
+          &__boxes {
+            max-width: 780px;
+            margin-left: 0;
+          }
+        }
+      }
+      &__range {
+        .range {
+          &__wrapper {
+            max-width: 773px;
+            margin-left: 6px;
+          }
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: $tablet) { 
+  .services {
+    .services {
+      &__range {
+        .range {
+          &__wrapper {
+            max-width: 100%;
+            margin-left: 0;
+          }
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: $mobile) { 
+  .services {
+    .services {
+      &__decorator {
+        @for $i from 1 through 5 {
+          &--#{$i} {
+            display: none;
+          }
+        }
+      }
+       &__banner {
+         .banner {
+           &__line2 {
+             right: 25px;
+           }
+           &__line3 {
+             display: none;
+           }
+           &__content {
+             padding-left: 0px;
+           }
+
+           &__bottom {
+             margin-top: 40px;
+           }
+
+           &__description {
+             max-width: 500px;
+           }
+         }
+       }
+       &__customer {
+         .customer {
+           &__boxes {
+             margin: 0;
+             margin-top: 50px;
+             justify-content: center;
+           }
+         }
+       }
+    }
+  }
+}

@@ -356,3 +356,147 @@
         }
     }
 }
+
+@media screen and (max-width: $tablet) {
+    .team {
+        .team {
+            &__banner {
+                .banner {
+                    &__content {
+                        padding-left: 130px;
+                    }
+                }
+            }
+            &__people {
+                .person {
+                    &__decorator {
+                        &--1 {
+                            width: 74px;
+                        }
+                    }
+                    &__top {
+                        
+                    }
+                    &__info {
+                        width: 50%;
+                        padding-left: 20px;
+                    }
+                    &__name {
+                        font-size: 39px;
+                        line-height: 49px;
+                    }
+                }
+            }
+            &__person {
+                &:nth-child(even) {
+                    .person {
+                        &__info {
+                            padding-left: 0;
+                            padding-right: 20px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+@media screen and (max-width: $mobile) {
+    .team {
+        .team {
+            &__people {
+                .person {
+                    &__decorator {
+                        &--1 {
+                            width: 58px;
+                            height: 210px;
+                        }
+                    }
+                    &__name {
+                        font-size: 35px;
+                        line-height: 45px;
+                        overflow-wrap: break-word;
+                    }
+                }
+            }
+        }
+    }
+}
+@media screen and (max-width: $mobile-sm) {
+    .team {
+        .team {
+            &__decorator {
+                &--1 {
+                    display: none;
+                }
+            }
+            &__banner {
+                .banner {
+                    &__content {
+                        padding-left: 0px;
+                    }
+                    &__bottom {
+                        margin-top: 40px;
+                    }
+                    &__description {
+                        max-width: 500px;
+                    }
+                }
+            }
+            &__person {
+                &:nth-child(even) {
+                    .person {
+                        &__top {
+                            &__wrapper {
+                                order: initial;
+                            }
+                        }
+                        &__bottom {
+                            justify-content: flex-end;
+                            padding-left: 0;
+                        }
+                        &__info {
+                            padding-right: 0;
+                        }
+                    }
+                }
+            }
+            &__people {
+                .person {
+                    &__decorator {
+                        &--1,
+                        &--2 {
+                            display: none;
+                        }
+                    }
+                    &__info {
+                        margin-top: 20px;
+                        padding-right: 0;
+                        padding-left: 0;
+                        width: auto;
+                    }
+                    &__top {
+                        flex-direction: column;
+                    }
+                    &__about {
+                        margin-top: 20px;
+                        margin-left: 0;
+                    }
+                    &__bottom {
+                        margin-right: 0;
+                    }
+                    &__timeline {
+                        .timeline {
+                            &__item {
+                                .item {
+                                    &__description {
+                                        padding-left: 0;
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

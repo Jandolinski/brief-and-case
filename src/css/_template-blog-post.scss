@@ -215,3 +215,37 @@
         }
     }
 }
+
+@media screen and (max-width: $tablet) {
+    .blog-post {
+        .next-post {
+            flex-direction: column;
+            align-items: flex-start;
+
+            .next-post {
+                &__article {
+                    .article {
+                        &__content {
+                            width: 100%;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media screen and (max-width: $mobile) {
+    .blog-post {
+        .blog-post {
+            &__banner {
+                .banner {
+                    &__tags {
+                        width: 100%;
+                    }
+                }
+            }
+        }
+        
+    }
+}
